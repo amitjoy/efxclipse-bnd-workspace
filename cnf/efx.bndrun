@@ -7,4 +7,4 @@ efx: \
 	${bundles.e4.core}
 
 requirement.efx: ${replacelist;${efx};.+;osgi.identity\\;filter:=\\"(osgi.identity=$0)\\"\\;effective:=active}
-requirement.gogo: ${replacelist;${bundles.equinox.console};.+;osgi.identity\\;filter:=\\"(osgi.identity=$0)\\"\\;effective:=active}
+requirement.gogo: ${replacelist;${bundles.console};.+;osgi.identity\\;filter:=\\"(osgi.identity=$0)\\"\\;effective:=active}
