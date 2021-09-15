@@ -29,10 +29,6 @@ sonatype.url.staging                  =         ${sonatype.url}/service/local/st
 efxclipse.version                     =         3.7.0
 efxclipse.url                         =         http://download.eclipse.org/efxclipse/runtime-released/${efxclipse.version}/site/repository.xml.gz
 
-password                              =         ${env;REPOSITORY_PASSWORD;}
-username                              =         ${env;REPOSITORY_USERNAME;}
--connection-settings                  =         ${if;${password};server;-dummy};id=${sonatype.url};username=${username};password=${password}, -bnd
-
 bin.directory                         =         ${if;${is;${driver};gradle};target/gradle/classes;target/classes}
 testbin.directory                     =         ${if;${is;${driver};gradle};target/gradle/test-classes;target/test-classes}
 bin.testbin.directory                 =         ${if;${is;${driver};gradle};target/gradle/classes,target/gradle/test-classes;target/classes,target/test-classes}
@@ -59,7 +55,7 @@ bin.testbin.directory                 =         ${if;${is;${driver};gradle};targ
 		          name                = "Runtime"; \
 		          index               = ${.}/maven/runtime.maven
 
--plugin.3.efxclipe            		  = \
+-plugin.3.efxclipse            		  = \
 		    aQute.bnd.deployer.repository.FixedIndexedRepo; \
 		          locations           = "${efxclipse.url}"; \
 		          name                = "e(fx)clipse"
