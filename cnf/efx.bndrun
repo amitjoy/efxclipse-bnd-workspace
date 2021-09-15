@@ -1,5 +1,3 @@
--runtrace: true
-
 efx: \
 	${bundles.e4.efxclipse},\
 	${bundles.equinox},\

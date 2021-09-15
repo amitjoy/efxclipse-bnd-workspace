@@ -33,13 +33,14 @@ public class MediaListPart {
                 setText(item.getName());
                 switch (item.getType()) {
                     case MOVIE:
-                        setGraphic(new ImageView("platform:/plugin/dummy/icons/kaffeine.png"));
+                        setGraphic(new ImageView("platform:/plugin/in.bytehue.fx.application/icons/kaffeine.png"));
                         break;
                     case PICTURE:
-                        setGraphic(new ImageView("platform:/plugin/dummy/icons/games-config-background.png"));
+                        setGraphic(new ImageView(
+                                "platform:/plugin/in.bytehue.fx.application/icons/games-config-background.png"));
                         break;
                     default:
-                        setGraphic(new ImageView("platform:/plugin/dummy/icons/player-volume.png"));
+                        setGraphic(new ImageView("platform:/plugin/in.bytehue.fx.application/icons/player-volume.png"));
                         break;
                 }
             }
@@ -90,14 +91,14 @@ public class MediaListPart {
         final MPart p = MBasicFactory.INSTANCE.createPart();
         p.setLabel(m.getName());
         if (m.getType() == MediaType.MOVIE) {
-            p.setIconURI("platform:/plugin/dummy/icons/22/kaffeine.png");
+            p.setIconURI("platform:/plugin/in.bytehue.fx.application/icons/22/kaffeine.png");
         } else if (m.getType() == MediaType.PICTURE) {
-            p.setIconURI("platform:/plugin/dummy/icons/22/games-config-background.png");
+            p.setIconURI("platform:/plugin/in.bytehue.fx.application/icons/22/games-config-background.png");
         } else {
-            p.setIconURI("platform:/plugin/dummy/icons/22/player-volume.png");
+            p.setIconURI("platform:/plugin/in.bytehue.fx.application/icons/22/player-volume.png");
         }
 
-        p.setContributionURI("bundleclass://dummy/dummy.parts.MediaPart");
+        p.setContributionURI("bundleclass://in.bytehue.fx.application/in.bytehue.fx.application.parts.MediaPart");
         p.getPersistedState().put(MediaPart.MEDIA_OBJECT_KEY, instance);
         stack.getChildren().add(p);
         partService.activate(p, true);
@@ -116,9 +117,12 @@ public class MediaListPart {
 
     private static ObservableList<Media> createList() {
         final ObservableList<Media> l = FXCollections.observableArrayList();
-        l.add(new Media(MediaType.PICTURE, "Desert", "platform:/plugin/dummy/icons/resources/pics/pic1.jpg"));
-        l.add(new Media(MediaType.PICTURE, "Lighthouse", "platform:/plugin/dummy/icons/resources/pics/pic2.jpg"));
-        l.add(new Media(MediaType.MOVIE, "Grog", "platform:/plugin/dummy/icons/resources/movs/mov1.flv"));
+        l.add(new Media(MediaType.PICTURE, "Desert",
+                "platform:/plugin/in.bytehue.fx.application/icons/resources/pics/pic1.jpg"));
+        l.add(new Media(MediaType.PICTURE, "Lighthouse",
+                "platform:/plugin/in.bytehue.fx.application/icons/resources/pics/pic2.jpg"));
+        l.add(new Media(MediaType.MOVIE, "Grog",
+                "platform:/plugin/in.bytehue.fx.application/icons/resources/movs/mov1.flv"));
         l.add(new Media(MediaType.MOVIE, "OTN", "http://download.oracle.com/otndocs/products/javafx/oow2010-2.flv"));
         return l;
     }

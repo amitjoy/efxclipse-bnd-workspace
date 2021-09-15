@@ -1,7 +1,6 @@
 bundles.equinox: \
 				 org.eclipse.equinox.app,\
 				 org.eclipse.equinox.common,\
-				 org.eclipse.equinox.ds,\
 				 org.eclipse.equinox.event,\
 				 org.eclipse.equinox.preferences,\
 				 org.eclipse.equinox.registry

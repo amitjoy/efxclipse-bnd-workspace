@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?eclipse version="3.0"?>
+<?eclipse version="3.2"?>
 <plugin>
-	<extension id="product"
-		point="org.eclipse.core.runtime.products">
-		<product name="Media Application"
-			application="org.eclipse.fx.ui.workbench.fx.application">
+	<extension id="product" point="org.eclipse.core.runtime.products">
+		<product name="Media Application" application="org.eclipse.fx.ui.workbench.fx.application">
 			<property name="appName" value="Media Application" />
-			<property name="applicationXMI" value="Application.e4xmi" />
+			<property name="applicationXMI" value="in.bytehue.fx.application/Application.e4xmi" />
 			<property name="cssTheme" value="theme.default" />
 		</product>
 	</extension>

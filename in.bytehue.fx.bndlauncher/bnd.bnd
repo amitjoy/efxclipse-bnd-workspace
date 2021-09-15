@@ -1,1 +1,4 @@
--buildpath: org.eclipse.core.runtime
+-conditionalpackage: aQute.lib.exceptions
+-buildpath: \
+	biz.aQute.bndlib;packages=*,\
+	org.eclipse.core.runtime

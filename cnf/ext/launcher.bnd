@@ -3,6 +3,7 @@
 -runtrace                       =         true 
 -runee                          =         JavaSE-1.8
 -runvm                          =         -ea
+-runsystemcapabilities          =         ${native_capability}
 -runpath.efx                    =         org.eclipse.fx.osgi
 -runproperties.efx              =         osgi.framework.extensions=org.eclipse.fx.osgi,\
                                           eclipse.application.launchDefault=true,\

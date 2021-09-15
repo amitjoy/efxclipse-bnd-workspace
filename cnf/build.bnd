@@ -1,5 +1,3 @@
-base.version                          =         0.1.0
-
 -includeresource.all                  =         -src/main/resources
 -donotcopy                            =         \.gitignore|\.DS_Store
 
@@ -35,36 +33,33 @@ password                              =         ${env;REPOSITORY_PASSWORD;}
 username                              =         ${env;REPOSITORY_USERNAME;}
 -connection-settings                  =         ${if;${password};server;-dummy};id=${sonatype.url};username=${username};password=${password}, -bnd
 
--groupid                              =         in.bytehue
--pom                                  =         version=${base.version}-SNAPSHOT
--releaserepo                          =         Release
-
 bin.directory                         =         ${if;${is;${driver};gradle};target/gradle/classes;target/classes}
 testbin.directory                     =         ${if;${is;${driver};gradle};target/gradle/test-classes;target/test-classes}
 bin.testbin.directory                 =         ${if;${is;${driver};gradle};target/gradle/classes,target/gradle/test-classes;target/classes,target/test-classes}
 
 -builderignore                        =         ${bin.testbin.directory}
 
--buildpath.all                        =         osgi.annotation, osgi.cmpn, osgi.core
+-buildpath.base.api                   =         in.bytehue.fx.api
+-buildpath.osgi                       =         osgi.annotation, osgi.cmpn, osgi.core
 -testpath.all                         =         osgi.enroute.junit.wrapper, osgi.enroute.hamcrest.wrapper
 
--plugin.1.Build               = \
-    aQute.bnd.repository.maven.provider.MavenBndRepository; \
-          snapshotUrl         = "${sonatype.url.snapshot}"; \
-          releaseUrl          = "${mave.central.url}"; \
-          readOnly            = true; \
-          name                = "Build"; \
-          index               = ${.}/maven/build.maven
+-plugin.1.Build               		  = \
+		    aQute.bnd.repository.maven.provider.MavenBndRepository; \
+		          snapshotUrl         = "${sonatype.url.snapshot}"; \
+		          releaseUrl          = "${mave.central.url}"; \
+		          readOnly            = true; \
+		          name                = "Build"; \
+		          index               = ${.}/maven/build.maven
 
--plugin.2.Runtime             = \
-    aQute.bnd.repository.maven.provider.MavenBndRepository; \
-          snapshotUrl         = "${sonatype.url.snapshot}"; \
-          releaseUrl          = "${mave.central.url}"; \
-          readOnly            = true; \
-          name                = "Runtime"; \
-          index               = ${.}/maven/runtime.maven
+-plugin.2.Runtime             		  = \
+		    aQute.bnd.repository.maven.provider.MavenBndRepository; \
+		          snapshotUrl         = "${sonatype.url.snapshot}"; \
+		          releaseUrl          = "${mave.central.url}"; \
+		          readOnly            = true; \
+		          name                = "Runtime"; \
+		          index               = ${.}/maven/runtime.maven
 
--plugin.3.efxclipe            = \
-    aQute.bnd.deployer.repository.FixedIndexedRepo; \
-          locations           = "${efxclipse.url}"; \
-          name                = "e(fx)clipse"
+-plugin.3.efxclipe            		  = \
+		    aQute.bnd.deployer.repository.FixedIndexedRepo; \
+		          locations           = "${efxclipse.url}"; \
+		          name                = "e(fx)clipse"

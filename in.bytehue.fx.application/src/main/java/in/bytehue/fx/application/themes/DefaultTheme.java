@@ -1,12 +1,13 @@
 package in.bytehue.fx.application.themes;
 
+import static org.osgi.service.component.annotations.ReferenceCardinality.MULTIPLE;
+import static org.osgi.service.component.annotations.ReferencePolicy.DYNAMIC;
+
 import org.eclipse.fx.ui.services.theme.Stylesheet;
 import org.eclipse.fx.ui.services.theme.Theme;
 import org.eclipse.fx.ui.theme.AbstractTheme;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
-import org.osgi.service.component.annotations.ReferenceCardinality;
-import org.osgi.service.component.annotations.ReferencePolicy;
 
 @Component(service = Theme.class)
 public class DefaultTheme extends AbstractTheme {
@@ -16,7 +17,7 @@ public class DefaultTheme extends AbstractTheme {
     }
 
     @Override
-    @Reference(cardinality = ReferenceCardinality.MULTIPLE, policy = ReferencePolicy.DYNAMIC)
+    @Reference(cardinality = MULTIPLE, policy = DYNAMIC)
     public void registerStylesheet(final Stylesheet stylesheet) {
         super.registerStylesheet(stylesheet);
     }

@@ -150,7 +150,6 @@ public class MediaPart {
             out.close();
             return f.toURI().toURL().toExternalForm();
         } catch (final IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         return uri;
