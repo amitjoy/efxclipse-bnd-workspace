@@ -1,0 +1,12 @@
+-runtrace: true
+
+efx: \
+	${bundles.e4.efxclipse},\
+	${bundles.equinox},\
+	${bundles.deps},\
+	${bundles.eclipse.emf},\
+	${bundles.eclipse.core},\
+	${bundles.e4.core}
+
+requirement.efx: ${replacelist;${efx};.+;osgi.identity\\;filter:=\\"(osgi.identity=$0)\\"\\;effective:=active}
+requirement.gogo: ${replacelist;${bundles.equinox.console};.+;osgi.identity\\;filter:=\\"(osgi.identity=$0)\\"\\;effective:=active}
