@@ -47,6 +47,7 @@
 	org.eclipse.emf.ecore.xmi;version='[2.16.0,2.16.1)',\
 	org.eclipse.equinox.app;version='[1.4.300,1.4.301)',\
 	org.eclipse.equinox.common;version='[3.10.600,3.10.601)',\
+	org.eclipse.equinox.console;version='[1.4.0,1.4.1)',\
 	org.eclipse.equinox.event;version='[1.5.300,1.5.301)',\
 	org.eclipse.equinox.preferences;version='[3.7.600,3.7.601)',\
 	org.eclipse.equinox.registry;version='[3.8.600,3.8.601)',\
