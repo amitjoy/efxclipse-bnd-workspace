@@ -1,4 +1,3 @@
--conditionalpackage: aQute.lib.exceptions
--buildpath: \
-	biz.aQute.bndlib;packages=*,\
-	org.eclipse.core.runtime
+-privatepackage     : in.bytehue.fx.bndlauchner 
+-conditionalpackage : aQute.lib.exceptions
+-buildpath          : biz.aQute.bndlib;packages=*, org.eclipse.core.runtime
