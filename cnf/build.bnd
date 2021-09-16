@@ -56,6 +56,6 @@ bin.testbin.directory                 =         ${if;${is;${driver};gradle};targ
 		          index               = ${.}/maven/runtime.maven
 
 -plugin.3.efxclipse            		  = \
-		    aQute.bnd.deployer.repository.FixedIndexedRepo; \
+		    aQute.bnd.repository.osgi.OSGiRepository; \
 		          locations           = "${efxclipse.url}"; \
 		          name                = "e(fx)clipse"
