@@ -72,7 +72,6 @@ public class MediaListPart {
                 System.err.println("secondary! Yay!");
             }
         });
-
         pane.setCenter(list);
     }
 
