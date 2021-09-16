@@ -8,7 +8,8 @@ bundles.equinox: \
 bundles.console: \
 				 org.apache.felix.gogo.runtime,\
 				 org.apache.felix.gogo.shell,\
-				 org.apache.felix.gogo.command
+				 org.apache.felix.gogo.command,\
+				 org.eclipse.equinox.console
 
 bundles.deps: \
 				 com.ibm.icu.base,\
