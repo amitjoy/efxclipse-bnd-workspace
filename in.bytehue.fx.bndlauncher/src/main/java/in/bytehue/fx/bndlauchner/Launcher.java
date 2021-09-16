@@ -2,6 +2,7 @@ package in.bytehue.fx.bndlauchner;
 
 import static java.util.Collections.emptyMap;
 import static org.osgi.framework.Constants.SERVICE_PID;
+import static org.osgi.service.component.annotations.ReferenceCardinality.OPTIONAL;
 
 import org.osgi.framework.BundleContext;
 import org.osgi.service.application.ApplicationDescriptor;
@@ -10,7 +11,6 @@ import org.osgi.service.application.ApplicationHandle;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
-import org.osgi.service.component.annotations.ReferenceCardinality;
 
 import aQute.lib.exceptions.Exceptions;
 import in.bytehue.fx.propertytypes.MainThread;
@@ -24,8 +24,8 @@ public final class Launcher implements Runnable {
     @Activate
     private BundleContext bundleContext;
 
-    @Reference(target = "(" + SERVICE_PID + "=" + APPLICATION_ID + ")", cardinality = ReferenceCardinality.OPTIONAL)
-    private ApplicationDescriptor applicationDescriptor;
+    @Reference(target = "(" + SERVICE_PID + "=" + APPLICATION_ID + ")", cardinality = OPTIONAL)
+    private volatile ApplicationDescriptor applicationDescriptor;
 
     @Override
     public void run() {
