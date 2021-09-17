@@ -12,11 +12,11 @@
 		<Region> 
 			<HBox.hgrow>ALWAYS</HBox.hgrow>
 		</Region>
-		<VBox spacing="3"> 
+		<VBox spacing="3">
 			<children>
-				<Button fx:id="window_close" onAction="#handleClose"/> 
-				<Button fx:id="window_min" onAction="#handleMin"/> 
-				<Button fx:id="window_max" onAction="#handleMax"/> 
+				<Button fx:id="window_close" onAction="#handleClose" />
+				<Button fx:id="window_min" onAction="#handleMin" />
+				<Button fx:id="window_max" onAction="#handleMax" />
 			</children>
 		</VBox>
 	</items>
