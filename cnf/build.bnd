@@ -20,7 +20,7 @@ testsrc                               =         src/test/java
 testbin                               =         ${testbin.directory}
 target-dir                            =         target
 
-mave.central.url                      =         https://repo.maven.apache.org/maven2/
+maven.central.url                      =        https://repo.maven.apache.org/maven2/
 sonatype.url                          =         https://oss.sonatype.org
 sonatype.url.snapshot                 =         ${sonatype.url}/content/repositories/snapshots/
 sonatype.url.staging                  =         ${sonatype.url}/service/local/staging/deploy/maven2/
@@ -38,23 +38,23 @@ bin.testbin.directory                 =         ${if;${is;${driver};gradle};targ
 -buildpath.osgi                       =         osgi.annotation, osgi.cmpn, osgi.core
 -testpath.all                         =         osgi.enroute.junit.wrapper, osgi.enroute.hamcrest.wrapper
 
--plugin.1.Build               		  = \
-		    aQute.bnd.repository.maven.provider.MavenBndRepository; \
-		          snapshotUrl         = "${sonatype.url.snapshot}"; \
-		          releaseUrl          = "${mave.central.url}"; \
-		          readOnly            = true; \
-		          name                = "Build"; \
-		          index               = ${.}/maven/build.maven
+-plugin.1.Build               		  =         \
+		    aQute.bnd.repository.maven.provider.MavenBndRepository;\
+		          snapshotUrl         =         ${sonatype.url.snapshot};\
+		          releaseUrl          =         ${maven.central.url};\
+		          readOnly            =         true;\
+		          name                =         Build;\
+		          index               =         ${.}/maven/build.maven
 
--plugin.2.Runtime             		  = \
-		    aQute.bnd.repository.maven.provider.MavenBndRepository; \
-		          snapshotUrl         = "${sonatype.url.snapshot}"; \
-		          releaseUrl          = "${mave.central.url}"; \
-		          readOnly            = true; \
-		          name                = "Runtime"; \
-		          index               = ${.}/maven/runtime.maven
+-plugin.2.Runtime             		  =         \
+		    aQute.bnd.repository.maven.provider.MavenBndRepository;\
+		          snapshotUrl         =         ${sonatype.url.snapshot};\
+		          releaseUrl          =         ${maven.central.url};\
+		          readOnly            =         true;\
+		          name                =         Runtime;\
+		          index               =         ${.}/maven/runtime.maven
 
--plugin.3.efxclipse            		  = \
-		    aQute.bnd.repository.osgi.OSGiRepository; \
-		          locations           = "${efxclipse.url}"; \
-		          name                = "e(fx)clipse"
+-plugin.3.efxclipse            		  =         \
+		    aQute.bnd.repository.osgi.OSGiRepository;\
+		          locations           =         ${efxclipse.url};\
+		          name                =         e(fx)clipse
